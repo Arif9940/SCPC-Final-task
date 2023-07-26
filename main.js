@@ -46,7 +46,7 @@ console.log(mostOFNumber(numbers))
 // take the operator input
 const operator = prompt('Enter operator ( either +, -, * or / ): ');
 
-// take the operand input
+// // take the operand input
 const number1 = parseFloat(prompt('Enter first number: '));
 const number2 = parseFloat(prompt('Enter second number: '));
 
@@ -69,7 +69,29 @@ else {
 // display the result
 console.log(`${number1} ${operator} ${number2} = ${result}`);
 
+//Task 6: Create a program that generates a random password of a specified length. The password should include a mix of uppercase letters, lowercase letters, numbers, and special characters.
 
+  const passwordBOx = document.getElementById('Password');
+  const length = 12;
+  const upperCases ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+  const symboll = '!@#$%^&*()?><';
+  const numberForpass ='0123456789';
+  const totalPassword = upperCases + lowerCase + symboll + numberForpass;
 
+  function createPassword(){
+    let password ='';
+    password += upperCases[Math.floor(Math.random() * upperCases.length) ];
+    password += lowerCase[Math.floor(Math.random() * lowerCase.length) ];
+    password += symboll[Math.floor(Math.random()* symboll.length) ];
+    password += numberForpass[Math.floor(Math.random()* numberForpass.length) ];
+
+    while(length>password){
+        password +=totalPassword[Math.floor(Math.random()* totalPassword.length) ];  
+    }
+    passwordBOx.value = password;
+  }
     
+
+  
 
