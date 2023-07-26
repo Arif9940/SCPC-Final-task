@@ -44,7 +44,7 @@ console.log(mostOFNumber(numbers))
 
 
 // take the operator input
-const operator = prompt('Enter operator ( either +, -, * or / ): ');
+const operator = prompt(' For task 5 Enter operator ( either +, -, * or / ): ');
 
 // // take the operand input
 const number1 = parseFloat(prompt('Enter first number: '));
@@ -92,6 +92,10 @@ console.log(`${number1} ${operator} ${number2} = ${result}`);
     passwordBOx.value = password;
   }
     
+// Task 8: Implement a JavaScript function to find the second smallest element in an array of numbers. The function should return the second smallest number.
 
-  
+let arrOfNum =[14,58,89,67,8,97,86,96,99,98,59];
+ 
+const newArrOfNum = arrOfNum.sort((a,b)=>a-b).reverse();
 
+console.log(newArrOfNum[1]);
