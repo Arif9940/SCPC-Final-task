@@ -28,4 +28,17 @@ const sumPositveNum =(arr)=>{
 const totalOfAllPositiveNum = sumPositveNum([12,-2,-3,4])
 console.log(totalOfAllPositiveNum);
 
+// Task 3: Write a JavaScript program to find the most frequent element in an array and return it.
+
+const numbers= [2, 2, 2, 3, 3, 5, 6, 7, 8, 8]
+
+function mostOFNumber(arr) {
+    const store = {}
+    arr.forEach((num) => store[num] ? store[num] += 1 : store[num] = 1)
+    return Object.keys(store).sort((a, b) => store[b] - store[a])[0]
+  }
+
+console.log(mostOFNumber(numbers))
+
+    
 
