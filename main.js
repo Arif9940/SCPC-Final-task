@@ -7,8 +7,8 @@
     }
     return newString;
 }
- const result = reverseStringWithoutMethod("hello world");
-  console.log(result);
+ const newString = reverseStringWithoutMethod("hello world");
+  console.log(newString);
 
 //   Task 2 : Create a function that takes an array of numbers as input and returns the sum of all positive numbers in the array. 
 
@@ -39,6 +39,37 @@ function mostOFNumber(arr) {
   }
 
 console.log(mostOFNumber(numbers))
+
+// Task 5: Implement a simple JavaScript calculator. The calculator should take two numbers and an operator (+, -, *, /) as input and return the result of the operation.
+
+
+// take the operator input
+const operator = prompt('Enter operator ( either +, -, * or / ): ');
+
+// take the operand input
+const number1 = parseFloat(prompt('Enter first number: '));
+const number2 = parseFloat(prompt('Enter second number: '));
+
+let result;
+
+// using if...else if... else
+if (operator == '+') {
+    result = number1 + number2;
+}
+else if (operator == '-') {
+    result = number1 - number2;
+}
+else if (operator == '*') {
+    result = number1 * number2;
+}
+else {
+    result = number1 / number2;
+}
+
+// display the result
+console.log(`${number1} ${operator} ${number2} = ${result}`);
+
+
 
     
 
